@@ -20,11 +20,12 @@ def start():
     running = True
     t.start()
 def stop():
-    global x, y
+    global x, y, running
     t.stop()
     if (running): 
         y += 1
         if curr_time % 600 % 10 == 0: x += 1
+    running = False
 def reset():
     global t, curr_time, x, y, running
     x = 0
